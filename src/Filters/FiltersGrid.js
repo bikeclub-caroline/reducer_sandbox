@@ -2,7 +2,6 @@ import { React, useReducer } from "react";
 import FilterCheckboxes from "../Filters/FilterCheckboxes";
 import FilterDropdown from "../Filters/FilterDropdown";
 import FilterFreeInput from "../Filters/FilterFreeInput";
-import { useState } from "react";
 import {
   filterReducer,
   FILTERS_INITIAL_STATE,
@@ -13,14 +12,6 @@ const FiltersGrid = () => {
   const colors = ["blue", "red", "green", "purple"];
   const wheelSizes = ["120", "130", "140"];
   const sizes = ["S", "M", "L", "XL"];
-  const [checkList, setCheckList] = useState([]);
-
-  //   useEffect(() => {
-  //     effect
-  //     return () => {
-  //         cleanup
-  //     };
-  //   }, [input]);
 
   const [state, dispatch] = useReducer(filterReducer, FILTERS_INITIAL_STATE);
 
